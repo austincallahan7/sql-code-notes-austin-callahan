@@ -1,0 +1,33 @@
+
+SELECT [TRACKING_POINT_VALUE_ID]
+      ,[SYSTEM_ID]
+      ,[TRACKING_GROUP_ID]
+      ,[TRACKING_POINT_ID]
+      ,[TASK_ID]
+      ,[FUNCTIONAL_TASK_ID]
+      ,[TIME_STAMP]
+      ,[SNAPSHOT_ID]
+      ,[TASKTITLE]
+      ,[CURRENTDUEDATE]
+      ,[INSTANCEID]
+      ,[TOTASKTYPE]
+      ,[INCLUDEINCOACH]
+      ,[DATEOFDEATH]
+      ,[TASKSTATUS]
+      ,[PRIORITY]
+      ,[USERTEAM]
+      ,[LINEOFBUSINESS]
+      ,[BUSINESSAREA]
+      ,[POLICYNUMBER]
+      ,[USERID]
+      ,[REQUESTRECEIVEDDATE]
+      ,[USERNAME]
+      ,[TASKID]
+  FROM [BPM_PDWUSR].[TG_IWM_PROCESSDATA_TG]
+
+ WHERE [INSTANCEID] is not null
+ AND ([LINEOFBUSINESS] like '%Life%'  or [LINEOFBUSINESS] like '%LTC%')
+ AND ([TASKSTATUS] = 'New Task' or [TASKSTATUS] = 'Routed')
+ AND [TASKTITLE] like 'Illustration Processing%'
+
+ ORDER BY [REQUESTRECEIVEDDATE] ASC
