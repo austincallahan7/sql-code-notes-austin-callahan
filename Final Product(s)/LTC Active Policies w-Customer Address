@@ -1,3 +1,32 @@
+# LTC Active Policies w-Customer Address
+
+## Project Objective(s)
+Blah
+
+## Project Owner(s)
+Israel Rodriguez, Julie Kleve
+
+## Analytics Consultant Owner(s)
+Austin Callahan
+
+## Data Sources
+* AZTEK_EBIS.EBI_ISSUED_DATA EBI_ISSUED_DATA
+* AZTEK_FRONTROOM.CUSTOMER_DIM
+* AZTEK_FRONTROOM.POLICY_CUSTOMER_FACT
+* AZTEK_FRONTROOM.POLICY_DIM
+
+### Tags
+  * sql
+  * aztek_frontroom
+  * aztek_ebis
+  * salesforce_replication
+  * Life inforce
+  * LTC
+  * Customer Data
+
+
+
+
 --LTC Active Policies w/Customer Address
 
 SELECT
