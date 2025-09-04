@@ -1,0 +1,20 @@
+--Illustration processing 
+
+SELECT
+		[PHS_REASON__C],
+		--[ROOT_CAUSE__C],
+	   [CASENUMBER] AS 'Case Number'
+      ,[SUBJECT] AS 'Subject'
+      ,[PRIORITY] AS 'Priority'
+	  ,[ISCLOSED] AS 'Closed'
+	  ,DATEADD(hh,-5,[CREATEDDATE]) AS 'Date/Time Opened'
+      ,DATEADD(hh,-5,[CLOSEDDATE]) AS 'Date/Time Closed'
+      ,[OWNER_ASSIGNED__C] AS 'Case Owner'
+      ,[POLICY_NUMBER_S__C] AS 'Policy Number'
+      ,[NEW_RESOLUTION_COMMENTS__C] AS 'Resolution Comments'
+      ,[AGE_IN_BUSINESS_DAYS__C] AS 'Age in Business Days'
+	  ,[LINE_OF_BUSINESS__C] AS 'Line of Business'
+      ,[PHS_FUNCTION__C] AS 'Function'
+  FROM [Salesforce_Replication].[dbo].[VW_SF_CASE_CAO_RPT]
+  WHERE [LINE_OF_BUSINESS__C] = 'Life' AND [CREATEDDATE] > '2025-01-01 00:00:00.000' and [PHS_REASON__C] = 'Illustration'
+
