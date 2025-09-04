@@ -2,7 +2,7 @@ IWM Tables
 
 --IWM Touchpoint data
 BPM_PDWUSR.TG_IWM_PROCESSDATA_TG - All touch points on a task, most recent 45 days
-BPM_TWREPORTING.B85_TG_IWM_PROCESSDATA_TG - All historical touch points on a task 
+BPM_TWREPORTING.B85_TG_IWM_PROCESSDATA_TG - All historical touch points on a task after 45 days, archive.
 
 -- IWM Most recent data
 AZTEK_EBIS.EBI_BPM_INSTANCE_DETAILS - Most recent status of a task
